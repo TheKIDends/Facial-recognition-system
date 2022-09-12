@@ -110,7 +110,7 @@ while (True):
     cv2.waitKey(1)
 
     # điều kiện thoát, khi số lượng hình ảnh đạt đủ
-    if sampleNum > 100:
+    if sampleNum >= 100:
         break
 
 # giải phóng bộ nhớ
