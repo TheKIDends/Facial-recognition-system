@@ -20,7 +20,7 @@ while (True):
     # biến frame là data lấy được từ webcam
     ret, frame = cap.read()
 
-    # cần chuyển anh về ảnh trắng xám để train
+    # cần chuyển về ảnh trắng xám để train
     # cvt là convert to
     # tham số 1: dữ liệu từ webcam
     # tham số 2: tham số để chuyển từ ảnh màu BGR thành ảnh xám GRAY

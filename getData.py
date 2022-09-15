@@ -1,7 +1,5 @@
-from random import sample
-from select import select
 import cv2 # thư viện opencv
-import numpy as np
+import numpy as np # thư viện toán học
 import sqlite3 # thư viện thao tác với database
 import os # thư viện truy cập vào hệ dẫn, hệ thống để lấy đường dẫn các thư mục
 
@@ -9,7 +7,7 @@ import os # thư viện truy cập vào hệ dẫn, hệ thống để lấy đ�
 def insertOrUpdate(id, name):
     # kết nối đến database
     # tham số: đường dẫn chứa database
-    conn = sqlite3.connect('D:\TheKIDends\IT\AI\Facial recognition system\Facial recognition system\Data\data.db')
+    conn = sqlite3.connect('D:\TheKIDends\IT\AI\Facial recognition system\Facial-recognition-system\database\data.db')
 
     # truy vấn các bản ghi trong ID
     query = "SELECT * FROM people WHERE ID=" + str(id)
@@ -63,7 +61,7 @@ while (True):
     # biến frame là data lấy được từ webcam
     ret, frame = cap.read()
 
-    # cần chuyển anh về ảnh trắng xám để train
+    # cần chuyển về ảnh trắng xám để train
     # cvt là convert to
     # tham số 1: dữ liệu từ webcam
     # tham số 2: tham số để chuyển từ ảnh màu BGR thành ảnh xám GRAY
@@ -84,13 +82,12 @@ while (True):
         # tham số 4: độ dày hình vuông
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 225, 0), 2)
 
-        # tạo forder để lưu ảnh vừa cắt được từ hình vuông 
+        # tạo folder để lưu ảnh vừa cắt được từ hình vuông 
 
-        # kiểm tra xem trong đường dẫn của mình đã có forder đấy chưa
+        # kiểm tra xem trong đường dẫn của mình đã có folder đấy chưa
         if not os.path.exists('dataSet'):
             # nếu chưa thì tạo
             os.makedirs('dataSet')
-        
         # ta sẽ lưu tên của ảnh theo định dạng (User.1.1, User.1.2,...) với 1 1 là ID và 1 2 là chỉ số
 
         # tăng chỉ số hình ảnh 
@@ -115,6 +112,4 @@ while (True):
 
 # giải phóng bộ nhớ
 cap.release()
-
-# hủy bộ nhớ
 cv2.destroyAllWindows()
