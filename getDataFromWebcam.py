@@ -1,7 +1,7 @@
 # Quá trình: 
     # Nhận diện khuôn mặt trên webcam. 
     # Lưu dữ liệu vào database để train cho máy. 
-    # Sử dụng 1 tấm ảnh khác để tren máy có nhận diện đúng không 
+    # Sử dụng 1 tấm ảnh khác để xem máy có nhận diện đúng không 
 
 # Bước 1: Nhận diện khuôn mặt trên webcam. 
 
@@ -51,6 +51,4 @@ while (True):
 
 # giải phóng bộ nhớ
 cap.release()
-
-# hủy bộ nhớ
 cv2.destroyAllWindows()
