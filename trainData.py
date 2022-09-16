@@ -1,3 +1,5 @@
+# Bước 3: Train dữ liệu
+
 import cv2 # thư viện opencv
 import numpy as np # thư viện toán học
 import os # thư viện truy cập vào hệ dẫn, hệ thống để lấy đường dẫn các thư mục

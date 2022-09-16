@@ -1,3 +1,5 @@
+# Bước 2: Lưu dữ liệu vào database để train cho máy
+
 import cv2 # thư viện opencv
 import numpy as np # thư viện toán học
 import sqlite3 # thư viện thao tác với database

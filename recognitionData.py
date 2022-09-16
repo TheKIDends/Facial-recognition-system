@@ -1,3 +1,5 @@
+# Bước 4: Sử dụng dữ liệu đã train để nhận diện tên người trên webcam
+
 import cv2 # thư viện opencv
 import numpy as np # thư viện toán học
 import os # thư viện truy cập vào hệ dẫn, hệ thống để lấy đường dẫn các thư mục
